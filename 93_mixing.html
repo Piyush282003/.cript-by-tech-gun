@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let usefulmethod = {
+            sayhi(){
+                console.log("Hi...")
+                console.log("bye...")
+            },
+            saybye(){
+            }
+        }
+        let usefulmethod2 = {
+            sayhi(){
+                console.log("Hi...")
+            },
+            saybye(){
+                console.log("bye hlo...")
+            }
+        }
+
+        class user{
+            constructor(){
+                this.name="Piyush..";
+            }
+        }
+
+        class admin extends user{
+
+        }
+
+        Object.assign(admin.prototype,usefulmethod)
+        Object.assign(admin.prototype,usefulmethod2)
+
+        let admin1= new admin();
+
+        console.log(admin1)
+        console.log(admin1.saybye())
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" name="form">Send</button>
+    <!-- attribute vo hota h jese id me equal to krke likhte h toh jo bhi aise likho vo attribute ho jata hai.. -->
+    <script>
+        let bton = document.getElementById("btn");
+        
+        //bton.style.cssText = "background-color: red; color:white; width:50px; height:40px"                       -->csstext ki ek khaami hoti h ki agr btn me pehle koi style diya ho toh use remove krdeta h and apna raj v=chlata h...lekin baaki neeche k 2 cases m aisa nhi hota coz yeh neeche usme khud ko add krte hai.....toh ss text ki iss khami se bchne ke liye += lgao na ki sirf =...okkk
+
+        //bton.setAttribute("style","background-color: red; color:white; width:50px; height:40px")
+
+        bton.style.color = "red"
+    </script>
+</body>
+</html>

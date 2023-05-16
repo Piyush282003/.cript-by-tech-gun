@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Swagat nhi kroge humara!</h1>
+    
+    <script>
+       let x = Math.random();                  //yeh bhi decimal dega but 0.4353252351 or 0.214532456 etc...
+       console.log(x);
+
+       let x2 = Math.random()*10;               //yeh decimal number dega jese 1.35344 or 4.354624546u etc...
+       console.log(x2);
+
+       let y =Math.floor( Math.random()*10);                //yeh decimal me nhi dega but 0 se 9 tk kuch bhi
+       console.log(y);
+
+       let a =Math.floor( Math.random()*10)+1;              //yeh decimal me kuch nhi dega but yeh 1 se 10 tk hi dega..
+       console.log(a);
+
+       let z =Math.floor( Math.random()*100);           //yeh 1 se 100 tk 
+       console.log(z);
+
+       let b =Math.floor( Math.random()*(25-15))+15;              //15 se 25 ke beech but 15 included not 25
+       console.log(b);
+
+       function getrandom(min,max){
+           let x = Math.floor(Math.random()*(max-min))+min;
+           return x;
+       }
+       console.log(getrandom(10,20));
+    </script>
+</body>
+</html>

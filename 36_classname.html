@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl">list 1</li>
+        <li id="first">list 2</li>
+        <li class="cl">list 3</li>
+        <li class="c">list 3</li>
+        <!-- <li class="cl pi">list 3</li> -->
+    </ul>
+    <script>
+        let elem = document.getElementsByClassName("cl");
+        //elem.innerHTML = "<p>hello</p>";
+        //yeh isliye nhi chlra coz classname se vo array bn jata hai toh ise access krne ke liye hume for loop vgrh lagana pdhega...
+        
+        for(let i=0;i<elem.length;i++){
+            elem[i].innerHTML = "<p>hello</p>";
+        }
+
+
+        document.getElementById("first").innerHTML = "hello"
+    </script>
+</body>
+</html>

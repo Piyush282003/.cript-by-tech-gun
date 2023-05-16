@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello piyush</h1>
+    <script>
+        let person = {
+            firstname : 'piyush',
+            lastname : 'khetarpal',
+            'last name' : 'kumar',
+            age : 25,
+
+            fulln : function(){
+                console.log(this.firstname + " "+ this.lastname)
+            }
+        }
+
+
+        let person2 = {
+            firstname : 'piyush',
+            lastname : 'khetarpal',
+            'last name' : 'kumar',
+            age : 25,
+
+            fulln : function(){
+                console.log(this.firstname + " "+ this.lastname)
+            }
+        }
+        console.log(person.age)
+        console.log(person['last name'])
+
+        person.fulln();
+    </script>
+
+
+    <!-- ab isme dekhoge toh DRY rule violet ho rha hai mtlb Do Not Repeat Yourself wala rule toh iske liye class use hota tha pr as we know ES6 se pehle class tha hi nhi toh usse pehle hum contructor function use krt the...  -->
+</body>
+</html>

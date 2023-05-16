@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class emp{
+            constructor(n){
+                console.log("emp contructor called...");
+                this.name = n;
+            }
+            msg(){
+                console.log("Hi...")
+            }
+        }
+
+        class manager extends emp{
+            constructor(p,d){
+                super(p)
+                this.department = d;
+            }
+            info(){
+                console.log(this.name+" is manager of department..."+this.department)
+            }
+        }
+
+        let mng1 = new manager("Piyush","software engineer") ;                   //-->this will show an error....
+        //let mng1 = new manager("Piyush");
+
+
+        console.log(mng1)
+        console.log(mng1.msg())
+        console.log(mng1.info())
+    </script>
+</body>
+</html>

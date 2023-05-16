@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tech Gun</h1>
+
+    <script>
+        function sum(name,...args){
+
+            //console.log(args);
+            let res=0;
+            for(let i=0;i<args.length;i++){
+                res+=args[i];
+            }
+            document.write(res)
+        }
+
+        let array1 = [1,2,5];
+        //sum("Piku",array1);                        //-->01,2,5 coz yeh alag alag value ni lera.ek hi value lera hai..
+        sum("Piku",...array1);
+        let array2 = [...array1,5,4.6,54];
+        sum("Piku",...array2);
+    </script>
+</body>
+</html>

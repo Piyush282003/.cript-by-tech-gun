@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sayHello(){
+            console.log("Helloo...")
+        }
+
+        function sayhi(){
+            console.log("Hi....")
+        }
+        function add(num1,num2,callback){
+            console.log(num1+num2);
+            callback();
+        }
+//aise hum jo callback ki help se koi bhi function calll kra skte hai or hum ek bna bhi skte hai....
+        add(10,20,sayHello)
+        add(40,20,sayhi)
+        add(20,20,()=>{
+            console.log("Tu jaa re...")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Swagat nhi kroge humara...</h1>
+    <script>
+        var student1 = {
+            firstname:"Piyush",
+            lastname:"Kumar",
+            age:34,
+            class:5
+        }
+
+        function student(first,last,age,cls){
+            this.firstname=first;
+            this.lastname=last;
+            this.age=age;
+            this.class=cls;
+        }
+
+        var student1 = new student("vishwajeet","bholu",25,60);
+        student1.nationality = "Indian";
+        console.log(student1);
+        
+        student1.name = function(){
+            return this.firstname+" "+this.lastname;
+        }
+        console.log(student1.name(3));
+        
+        student.prototype.gender = "Male";
+        var student2 = new student("vishwajeet","bholu",25,60);
+        console.log(student2);
+    </script>
+</body>
+</html>

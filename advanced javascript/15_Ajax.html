@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Here we Load Data..</p>
+
+    <button onClick="loadData()">Click</button>
+</body>
+<script>
+    function loadData(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.status==200 && this.readyState==4){
+                console.log(this.responseXML);
+                console.log(this.responseText);
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            else if(this.status==404 && this.readyState==4){
+                document.getElementById("demo").innerHTML = "File not exist...";
+            }
+        }
+        xhttp.open('GET',"../content/readme.txt",true);          //method is in single ''
+        //xhttp.open('GET',"./content/readme.txt",true);          //method is in single ''
+        xhttp.send();
+    }
+</script>
+</html>

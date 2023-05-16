@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" name="form">Send</button>
+    <!-- attribute vo hota h jese id me equal to krke likhte h toh jo bhi aise likho vo attribute ho jata hai.. -->
+    <script>
+        let bton = document.getElementById("btn");
+        //bton.setAttribute("name","form1");
+
+        let val = bton.getAttribute("name");
+        console.log(val)
+        
+        let val1 = bton.removeAttribute("name");
+        let val2 = bton.hasAttribute("name");
+        console.log(val2)
+    </script>
+</body>
+</html>

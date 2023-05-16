@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Krlo Beta...</h1>
+
+    <script>
+        //let t = true;
+        //let t = "true";
+        //alert(typeof t)
+
+        let t=5+null;
+        console.log(t);
+        console.log(typeof t);
+
+        let p="5"+null;
+        console.log(p);
+        console.log(typeof p);
+
+        let q="5"+2;
+        console.log(q);
+        console.log(typeof q);
+
+        let a="5"-2;
+        console.log(a);
+        console.log(typeof a);
+
+        let b="5"*2;
+        console.log(b);
+        console.log(typeof b);
+
+        let c="5"*"yes";
+        console.log(c);
+        console.log(typeof c);
+
+
+        //and
+
+
+        let tp=4;
+        console.log(typeof tp);
+        //let newtp = Boolean(tp);
+        let newtp = String(tp);
+        console.log(newtp);
+        console.log(typeof newtp);
+
+        //let tp1=4;
+        let tp1="";
+        console.log(typeof tp1);
+        let newtp1 = Boolean(tp1);
+        console.log(newtp1);                                     //0 ke alava baaki sab boolean me true dikhayega voh...    
+        console.log(typeof newtp1);
+        
+        
+        let m = "Piyush";
+        console.log(typeof m);
+        let newm=Number(m);
+        console.log(newm);                                   //isse NAN aayega usme...and NAN ko bhi vo type number me rkhta hai..
+        console.log(typeof newm);
+
+
+        let s = true;
+        console.log(typeof s);
+        let news=Number(s);
+        console.log(news);                                   //isse 1 aayega usme coz humne true de rkha hai usme....and 0 for false ke liye aayega..
+        console.log(typeof news);
+    </script>
+</body>
+</html>

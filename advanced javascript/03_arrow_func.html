@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function hello1(){
+        document.write("Hello1");
+        document.write("<br>");
+    }
+    hello1();
+    let hello2 = function(){
+        document.write("Hello2");
+        document.write("<br>");
+    }
+    hello2();
+
+
+    let hello12 = function(){
+        return "Hello world <br>";
+    }
+    document.write(hello12());
+
+
+    //function ni likha or () ke baad => lga dia
+    let hello3 = name => `Hello ${name} <br>`;
+    document.write(hello3("Piyush"));
+
+
+    let hello4 = (name,age) =>{
+        return `Hello ${name}..Your age is ${age} <br>`;
+    }
+    document.write(hello4("Piku",45));
+
+
+    let h = "hlo";
+    let h2 = 45;
+    document.write(typeof(hello4));               //-->function 
+    document.write("<br>");
+    document.write(typeof(h));               
+    document.write("<br>");
+    document.write(typeof(h2));              
+
+</script>
+</html>

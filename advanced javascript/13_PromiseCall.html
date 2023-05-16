@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //promise call se el promise bnake kaam krlenge hum
+    let promisecall = function(returndata,message){
+        return function(resolve,reject){
+            setTimeout(()=>{
+                console.log(`The ${message} has been resolved..`);
+                resolve(returndata);   
+            },returndata*100);
+        }
+    };
+
+    let p1=new Promise(promisecall(10,"first"));
+    let p2=new Promise(promisecall(20,"Second"));
+    let p3=new Promise(promisecall(30,"Third"));
+    
+    let sum=0;
+    Promise.all([p1,p2,p3]).then((result)=>{
+        console.log(`Results: ${result}`);
+        for(let i of result){
+            sum+=i;
+        }
+        console.log(`Total is ${sum}`);
+    }).catch((error)=>{
+        console.log(error);
+    })
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: red;
+            color: white;
+        }
+
+        .dim{
+            border: 4px solid black;
+            padding: 100px;
+        }
+        .size{
+            font-size: 45px;
+        }
+
+        .weight{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="color">
+        <p>This is a dummy text....</p>
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+        //console.log(box.className);
+        box.className += " dim";
+        //console.log(box.classList);                          --> isse array bn jata h...
+
+        for(let css of box.classList){
+            console.log(css)
+        }
+
+
+        box.classList.add("size")
+        box.classList.remove("dim")
+        box.classList.replace("color","dim")
+
+        let result = box.classList.contains("dim");
+        console.log(result);
+
+
+        box.classList.toggle("weight")                            //isse agr nhi hoga uske style me toh lga dega or agr ho toh remove krdega....
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Swagat nhi kroge humara..</h1>
+
+    <script>
+        let str="Piyush Khetarpal";
+        let str2="Manish Khetarpal";
+        console.log(str);
+        console.log(str.length);
+        console.log(str[1]);
+
+        console.log(str+" "+str2);
+
+
+        //if(str=="piyush Khetarpal"){
+        if(str=="Piyush Khetarpal"){
+            console.log("Equal");
+        }
+        else{
+            console.log("Not equal..");
+        }
+
+
+
+        //adding two strings..
+        let p = "Piyush";
+        let q = "Kumar";
+        let r = p.concat(" ",q);
+        console.log(r);
+
+        let x = "This is Javascripthj tutorial..It is a good tutorial...";
+        let subx=x.substr(8,18)                       //mtlb 8 se shuru kro and uske aage ke 18 character uthalo...
+        console.log(subx);
+
+        let substringx = x.substring(8,19);
+        console.log(substringx);
+
+
+        let str4="This is Javascript Tutorial.. It is a good tutorial.."
+        //let position = str4.indexOf('good');
+        let trimdstr= str4.includes("good")
+        console.log(trimdstr)
+        //console.log(position)
+    </script>
+</body>
+</html>

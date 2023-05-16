@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //let name = "Heloo";
+    //let course = "Btech";
+    //let obj={
+    //    name,
+    //    course
+    //}
+    //console.log(obj);
+
+
+
+    let n = "student";
+    let b = "cse";
+    let obj={
+        [n]:"Yahoo Baba",
+        [b+"branch"]:"Cse",
+        course:"Btech",
+        //detail:function(){
+        //    return `${this.student} is of ${this.course} and ${this.csebranch}`
+        //}
+        detail(){
+            return `${this.student} is of ${this.course} and ${this.csebranch}`
+        },
+        'show ing'(){
+            return `${this.student} is of ${this.course} and ${this.csebranch}`
+        }
+    }
+    console.log(obj);
+    console.log(obj.detail());               
+    console.log(obj['show ing']());                      //agr naam me space dena chahte ho toh use '' me dena and call ke tym [] ko use kro..
+    
+    
+
+
+    let fname="Piyush";
+    let lname="Kumar";
+    let course="BE";
+    let student=(fname,lname,course)=>{
+        let fullname=fname+" "+lname;
+        return {fullname,course}                           //object return kr rhe hai
+    
+    }
+
+    document.write(student(fname,lname,course));
+    console.log(student(fname,lname,course));
+</script>
+</html>

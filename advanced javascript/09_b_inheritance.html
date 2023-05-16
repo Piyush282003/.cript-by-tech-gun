@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class employee{
+        constructor(name){
+            this.name=name;
+            console.log("Constructor of base class..."+this.name);
+        }
+        //constructor(){
+        //    console.log("Constructor of base class...");
+        //}
+        
+        msg(){
+            console.log("Msg of base class");
+        }
+    }
+    class manager extends employee{
+        constructor(){
+            super("piku"); 
+            //super();                                              //yeh krna important hota hai js me jabki java me jab paramter ho tbhi lagana hota hai..
+            console.log("Constructor of derived class");
+        }
+
+        msg(){
+            super.msg();                                //isse base class ka msg() bhi call hojega..
+            console.log("Msg of derived class");
+        }
+    }
+    class test extends manager{
+
+    }
+
+    //let m = new manager("Piyush");
+    //m.msg();
+
+    let t = new test();
+</script>
+</html>

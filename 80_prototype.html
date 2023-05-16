@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(first,last,a){
+            this.firstname = first;
+            this.lastname = last;
+            this.age = a;
+
+            this.fullname = function(){
+                console.log(this.firstname + " " + this.lastname)
+            }
+        }
+        //isme fullname dono me copy ho rha hai toh ise connect krwao na ki copy coz usse DRY rule violet hota hai...
+
+        let person1 = new Person("Piyush","kumar",50);
+        let person2 = new Person("Girish","kumar",50);
+
+        console.log(person1)
+        console.log(person2)
+    </script>
+</body>
+</html>

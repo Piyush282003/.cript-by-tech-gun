@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let complete=true;
+    let p = new Promise(function(resolve,reject){
+        if(complete){
+            resolve("I am successful p");
+        }
+        else{
+            reject("I am failed");
+        }
+    });
+    
+    console.log(p);
+
+    //or
+
+    function p2(comp){
+        return new Promise(function(resolve,reject){
+            console.log("Fetching data,please wait..");
+            setTimeout(()=>{
+                if(comp){
+                    resolve("Pass hogya bhai");
+                }else{
+                    reject("Fail hu bhai");
+                }
+            },3000);
+        });
+    }
+    //console.log(p2(false));
+
+
+    let onfulfillment = (result)=>{
+        console.log(result);
+    }
+    let onRejection = (error)=>{
+        console.log(error);
+    }
+
+    p.then(onfulfillment);
+    p.catch(onRejection);
+
+    p2(true).then(onfulfillment);
+    p2(true).catch(onRejection);
+
+    //method chaining
+    p2(false).then(onfulfillment).catch(onRejection);
+
+</script>
+</html>
